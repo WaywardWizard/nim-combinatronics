@@ -41,7 +41,7 @@ k=3: ABC --> ABC (6 swaps)
   further swap to the original ABC. For larger lengths
 
   | Length (k) | Start | Finish |
-  | --  | -- | -- |
+  | ---  | --- | --- |
   | 3 | ABC | CBA |
   | 5 | ABCDE | EBCDA |
 
