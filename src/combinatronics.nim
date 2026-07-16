@@ -1,4 +1,4 @@
-## .. importdoc:: combination.md
+## .. importdoc:: algorithm.md
 import sets, algorithm
 var nswap: int
 iterator permutor*(x: var seq, cursor: int = 0): lent seq {.closure.} =
