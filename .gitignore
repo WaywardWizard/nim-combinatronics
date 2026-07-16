@@ -3,3 +3,7 @@ nimbledeps
 nimbledeps/
 nimble.develop
 nimble.paths
+
+tests/*
+!tests/*.nim
+!tests/*.nims
