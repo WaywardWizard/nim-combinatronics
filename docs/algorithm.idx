@@ -1,0 +1,12 @@
+markupTitle	algorithm.md	algorithm.html	algorithm.md		0
+heading	Permutations	algorithm.html#permutations	 Permutations		0
+heading	ABC	algorithm.html#abc	 ABC		0
+heading	Algorithm	algorithm.html#algorithm	  Algorithm		0
+heading	k=1 Base Case	algorithm.html#keq1-base-case	   k=1 Base Case		0
+heading	k=2 Right shift, single swap	algorithm.html#keq2-right-shift-single-swap	   k=2 Right shift, single swap		0
+heading	k=3 Swap first with last, tail right shifts on recursion	algorithm.html#keq3-swap-first-with-last-tail-right-shifts-on-recursion	   k=3 Swap first with last, tail right shifts on recursion		0
+heading	k=4 Right shift, tail has swap(1,^1) on recursion	algorithm.html#keq4-right-shift-tail-has-swap-1-roof1-on-recursion	   k=4 Right shift, tail has swap(1,^1) on recursion		0
+heading	k=5 Swap first with last, tail has right shift on recursion	algorithm.html#keq5-swap-first-with-last-tail-has-right-shift-on-recursion	   k=5 Swap first with last, tail has right shift on recursion		0
+heading	k=6 Recurse, swap(0,1), recurse, swap(0,2), recurse .., swap(0,^1), recurse	algorithm.html#keq6-recurse-swap-0-1-recurse-swap-0-2-recurse-dotdot-swap-0-roof1-recurse	   k=6 Recurse, swap(0,1), recurse, swap(0,2), recurse .., swap(0,^1), recurse		0
+heading	Combinations	algorithm.html#combinations	 Combinations		0
+heading	Algorithm	algorithm.html#algorithm	  Algorithm		0

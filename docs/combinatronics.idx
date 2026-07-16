@@ -1,0 +1,3 @@
+nimTitle	combinatronics	combinatronics.html	module combinatronics		0
+nim	permutor	combinatronics.html#permutor.i,seq,int	iterator permutor(x: var seq; cursor: int = 0): lent seq		4
+nim	combinator	combinatronics.html#combinator.i,openArray[T]	iterator combinator[T](x: openArray[T]): HashSet[T]		66
