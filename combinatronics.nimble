@@ -4,7 +4,6 @@ author        = "Ben Tomlin"
 description   = "Efficiently generate permutations and combinations"
 license       = "MIT"
 srcDir        = "src"
-installFiles  = @["LICENSE"]
 
 # Tasks
 when fileExists "tasks.nims": # not distributed as nimble package
