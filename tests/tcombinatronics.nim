@@ -12,7 +12,8 @@ suite "Combinatronics":
     for ix in 0 .. (word.len - 1):
       var data = word[0 .. ix].toSeq
       let pre = data.join
-      for _ in permutor(data): discard
+      for _ in permutor(data):
+        discard
       let post = data.join
       check pre == post
 
