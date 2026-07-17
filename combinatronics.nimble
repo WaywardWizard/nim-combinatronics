@@ -4,16 +4,16 @@ version       = "1.2.0"
 author        = "Ben Tomlin"
 description   = "Efficiently generate permutations and combinations"
 license       = "MIT"
+srcDir        = "src"
 
 include "tasks.nims" # distribute th{is,ese} files or the nimble file breaks
 
 # Select files to distribute here. Use * as a greedy wildcard
 # This hack avoids the awful nimble selection logic
 let ignoreDirs = ["nimbledeps","tests"]
-let installFileSelectors = [(".",@["tasks.nims","*.md","LICENSE"]),("src",@["*.nim"])]
+let installFileSelectors = [(".",@["tasks.nims","*.md","LICENSE"]),(srcDir,@["*.nim"])]
 
 # Locate installation files
-if srcDir != "": raise ValueError.newException "srcDir setting interferes with file selection"
 proc findfiles(dir: string = ".", ipath: openArray[string] = ["*"]): seq[string] =
   var cmd = "find " & dir
   for i in ignoreDirs: cmd &= " -iname $# -prune -o " % [i]
