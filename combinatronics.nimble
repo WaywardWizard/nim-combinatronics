@@ -18,7 +18,7 @@ proc findfiles(dir: string = ".", ipath: openArray[string] = ["*"]): seq[string]
   var cmd = "find " & dir
   for i in ignoreDirs: cmd &= " -iname $# -prune -o " % [i]
   for pattern in ipath:
-    result.add gorgeEx(cmd & "-ipath '$1/$2' -printf '%P\n'" % [dir, pattern]).output.splitlines()
+    result.add gorgeEx(cmd & "-ipath '$1/$2' -printf '%p\n'" % [dir, pattern]).output.splitlines()
 installFiles = @[]
 for (folder,patterns) in installFileSelectors:
   installFiles.add folder.findfiles(patterns)
