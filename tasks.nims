@@ -80,3 +80,24 @@ task rmghpage, "Remove github page":
   exec "gh api --method DELETE repos/{owner}/{repo}/pages"
 task ghpage, "Query status of github pages page for repo":
   exec "gh api repos/{owner}/{repo}/pages"
+
+import std/strbasics
+task format, "Format nim code":
+  ## Usually, this should be done by the person writing code. This is retrospective
+  exec "git ls-files|grep '.nim$'|xargs -n1 nph"
+  let nphv = (gorgeEx "nph --version").output.strip
+  exec &"git ls-files|grep '.nim$'|xargs git commit -m \"Formatted with nph {nphv}\" "
+  # git config --global blame.ignoreRevsFile .git-blame-ignore-revs
+  exec &"echo \"Formatted with nph {nphv}\" >> .git-blame-ignore-revs"
+  exec "git rev-parse HEAD >> .git-blame-ignore-revs"
+  exec "git commit -m \"blame ignore\" .git-blame-ignore-revs"
+
+task prepush, "Check valid to push":
+  exec "nimble check" # nimble valid
+  exec "nimble test"  # tests pass
+  exec "git ls-files|grep '.nim$'|xargs -n1 nph --check"
+
+task gitsetup, "Setup push hooks, formatter ignores":
+  exec "git config --local blame.ignoreRevsFile .git-blame-ignore-revs"
+  let ppp = ".git/hooks/pre-push"
+  exec &"cp {ppp}{{.sample,}};chmod +x {ppp};echo \"nimble prepush\">{ppp}"
